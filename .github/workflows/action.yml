@@ -6,6 +6,12 @@ on:
     paths-ignore:
       - '.github/workflows/**'
       - '**/mainTest.cpp'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy'
+        required: false
+        default: 'staging'
 
 jobs:
   get_changed_files:
